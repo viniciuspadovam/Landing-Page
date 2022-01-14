@@ -13,6 +13,7 @@ header div#navbar {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    position: relative;
     padding: 1.5rem 2.5rem 0 2.5rem;
 }
 header div#navbar p#logo {
@@ -21,12 +22,16 @@ header div#navbar p#logo {
     font-weight: 500;
     color: #d2872c;
 }
-header div#navbar div#icon {
+header div#navbar div#dropdown-icon {
     cursor: pointer;
 }
 header div#navbar ul#link-group {
     display: none;
+    background: #fff;
     list-style: none;
+    width: 350px;
+    position: absolute;
+    top: 3rem;
     padding-left: 1rem;
 }
 header div#navbar ul#link-group li {
@@ -63,7 +68,29 @@ main div#info-container button {
     font-family: 'Roboto', sans-serif;
     background: #d2872c;
     color: #fff;
+    cursor: pointer;
     border: none;
     border-radius: 10px;
     padding: 0.8rem 5rem;
+    transition: 0.3s;
 }
+main div#info-container button:hover {
+    background: #c07d2a;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/*@media (min-width: 500px) {
+    header div#navbar ul#link-group {
+        display: flex;
+    }
+    header div#navbar ul#link-group li ~ li {
+        margin-left: 0.8rem;
+    }
+    header div#navbar div#dropdown-icon {
+        display: none;
+    }
+
+    main {
+        flex-direction: row;
+    }
+}*/
